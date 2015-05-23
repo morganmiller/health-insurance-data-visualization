@@ -5,12 +5,12 @@
 * √ Save it somehow (database, file...)
 * Choose API
   ```
-  GET /plans.json
+  GET /plans
     [{"id": 1, "state": "AK", "child_premium": 123, "plan_type": "PPO"},
      {"id": 2, "state": "AL", "child_premium": 456, "plan_type": "HMO"}
     ]
 
-  GET /plans/2.json
+  GET /plans/2
      {"id": 2, "state": "AL", "child_premium": 456, "plan_type": "HMO"}
   ```
 * Build API
