@@ -1,12 +1,21 @@
-*DREAMS*
+## DREAMS
 
-Locate source of information we can consume
-Prove we can consume it
-Save it somehow (database, file...)
-Choose API
-Build API
+* √ Locate source of information we can consume
+* √ Prove we can consume it
+* √ Save it somehow (database, file...)
+* Choose API
+  ```
+  GET /plans.json
+    [{"id": 1, "state": "AK", "child_premium": 123, "plan_type": "PPO"},
+     {"id": 2, "state": "AL", "child_premium": 456, "plan_type": "HMO"}
+    ]
 
-*DETAILS*
+  GET /plans/2.json
+     {"id": 2, "state": "AL", "child_premium": 456, "plan_type": "HMO"}
+  ```
+* Build API
+
+## DETAILS
 
 The plan data show premiums for the following rating scenarios:
 
