@@ -3,17 +3,22 @@
 * √ Locate source of information we can consume
 * √ Prove we can consume it
 * √ Save it somehow (database, file...)
-* Choose API
+* √ Choose API
+* √ plans index: GET request to `/plans` returns JSON for each plan
   ```
-  GET /plans
-    [{"id": 1, "state": "AK", "child_premium": 123, "plan_type": "PPO"},
-     {"id": 2, "state": "AL", "child_premium": 456, "plan_type": "HMO"}
-    ]
-
+  [{"id": 1, "state": "AK", "child_premium": 123, "plan_type": "PPO"},
+   {"id": 2, "state": "AL", "child_premium": 456, "plan_type": "HMO"}
+  ]
+  ```
+* x plan show: GET request to `/plans/id` returns JSON for each plan / 404 if id DNE
+  ```
   GET /plans/2
-     {"id": 2, "state": "AL", "child_premium": 456, "plan_type": "HMO"}
+  {"id": 2, "state": "AL", "child_premium": 456, "plan_type": "HMO"}
   ```
-* Build API
+* Add the tests we need to feel confident in it
+* Allow the db to be persisted
+* Rake tasks for scraping and importing
+* Importing shouldn't duplicate data
 
 ## DETAILS
 
