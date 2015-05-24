@@ -11,6 +11,11 @@ class MahApp < Sinatra::Base
 
   get '/plans/:id' do
     content_type :json
-    Plan.find(params[:id]).to_json
+    begin
+      Plan.find(params[:id]).to_json
+    rescue ActiveRecord::RecordNotFound
+      status 404
+      {error: "Not a valid id"}.to_json
+    end
   end
 end
