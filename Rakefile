@@ -8,3 +8,6 @@ desc 'Run my tests!'
 task 'test' do
   sh 'mrspec -I .:test'
 end
+
+
+task default: 'test'
