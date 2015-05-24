@@ -1,6 +1,8 @@
 $LOAD_PATH.unshift 'lib', __dir__
 root_dir = File.expand_path '.', __dir__
 
+task default: 'test'
+
 desc 'Start the server for the application'
 task 'server' do
   sh 'rackup config.ru'
@@ -17,4 +19,11 @@ task 'reset' do
   AppEnv.new(root_dir, 'development').reset
 end
 
-task default: 'test'
+desc 'Import the scraped data into the database'
+task 'import' do
+  require 'app_env'
+  AppEnv.new(root_dir, 'development').load
+
+  require 'import'
+  Import.call "#{root_dir}/data/data.json"
+end

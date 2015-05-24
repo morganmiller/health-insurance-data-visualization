@@ -1,7 +1,5 @@
 require 'sinatra'
-
-# TODO: This reparses/imports every time, would be better to do that only once
-require_relative 'import'
+require 'plan'
 
 class MahApp < Sinatra::Base
   get '/plans' do
