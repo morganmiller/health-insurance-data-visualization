@@ -17,7 +17,7 @@
   ```
 * √ Add the tests we need to feel confident in it
 * √ Allow the db to be persisted
-* Rake tasks for scraping and importing
+* √ Rake tasks for scraping and importing
 * Importing shouldn't duplicate data
 
 ## DETAILS
