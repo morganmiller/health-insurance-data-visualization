@@ -6,7 +6,7 @@ end
 
 desc 'Run my tests!'
 task 'test' do
-  sh 'mrspec -I .:test'
+  sh 'mrspec -I test'
 end
 
 
