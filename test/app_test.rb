@@ -1,6 +1,4 @@
-require 'minitest/spec'
-require 'rack/test'
-require 'mah_app'
+require 'test_helper'
 
 class AppTest < Minitest::Spec
   include Rack::Test::Methods

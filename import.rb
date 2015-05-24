@@ -1,5 +1,5 @@
 require 'json'
-require_relative 'plan_manager'
+require_relative 'plan'
 
 data = JSON.parse File.read("#{__dir__}/data.json")
 
