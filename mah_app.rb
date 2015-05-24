@@ -9,6 +9,8 @@ class MahApp < Sinatra::Base
     Plan.all.to_json
   end
 
-  # GET /plans/2
-  #    {"id": 2, "state": "AL", "child_premium": 456, "plan_type": "HMO"}
+  get '/plans/:id' do
+    content_type :json
+    Plan.find(params[:id]).to_json
+  end
 end
