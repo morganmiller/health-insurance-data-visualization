@@ -16,7 +16,7 @@
   {"id": 2, "state": "AL", "child_premium": 456, "plan_type": "HMO"}
   ```
 * √ Add the tests we need to feel confident in it
-* Allow the db to be persisted
+* √ Allow the db to be persisted
 * Rake tasks for scraping and importing
 * Importing shouldn't duplicate data
 
