@@ -11,9 +11,13 @@ module Import
                    .to_h
 
     data["data"].each do |column|
-        Plan.create! state:         column[column_map["State"]],
-                     child_premium: column[column_map["Premium Child"]],
-                     plan_type:     column[column_map["Plan Type"]]
+      attributes = {
+        state:         column[column_map["State"]],
+        child_premium: column[column_map["Premium Child"]],
+        plan_type:     column[column_map["Plan Type"]],
+      }
+
+      Plan.find_by(attributes) || Plan.create!(attributes)
     end
   end
 end
