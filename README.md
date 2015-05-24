@@ -10,12 +10,12 @@
    {"id": 2, "state": "AL", "child_premium": 456, "plan_type": "HMO"}
   ]
   ```
-* x plan show: GET request to `/plans/id` returns JSON for each plan / 404 if id DNE
+* √ plan show: GET request to `/plans/id` returns JSON for each plan / 404 if id DNE
   ```
   GET /plans/2
   {"id": 2, "state": "AL", "child_premium": 456, "plan_type": "HMO"}
   ```
-* Add the tests we need to feel confident in it
+* √ Add the tests we need to feel confident in it
 * Allow the db to be persisted
 * Rake tasks for scraping and importing
 * Importing shouldn't duplicate data

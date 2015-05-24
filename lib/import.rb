@@ -1,7 +1,7 @@
 require 'json'
-require_relative 'plan'
+require 'plan'
 
-data = JSON.parse File.read("#{__dir__}/data.json")
+data = JSON.parse File.read("#{__dir__}/../data/data.json")
 
 column_map = data["meta"]["view"]["columns"].reject { |c| c["id"] == -1 }
   .map { |c| [c["name"], c["id"].to_s] }.to_h
