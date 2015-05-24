@@ -10,12 +10,16 @@ class AppEnv
   end
 
   def reset
-    ENV["RAILS_ENV"] = environment
-    ensure_dirs 'db', 'log'
     rm db_file
+    load
+    define_schema
+  end
+
+  def load
+    ensure_dirs 'db', 'log'
+    ENV["RAILS_ENV"] = environment # ...might be needed by ActiveRecord::Base... not sure
     ActiveRecord::Base.establish_connection adapter: 'sqlite3', database: db_file
     ActiveRecord::Base.logger = logger
-    define_schema
   end
 
   private
