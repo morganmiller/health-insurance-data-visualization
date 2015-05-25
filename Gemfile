@@ -1,0 +1,11 @@
+source 'https://rubygems.org'
+
+gem 'sinatra', require: 'sinatra/base'
+gem 'sqlite3'
+gem 'mrspec'
+gem 'pry'
+gem 'capybara'
+gem 'launchy'
+gem 'activerecord'
+gem 'rest-client'
+gem 'rake'
